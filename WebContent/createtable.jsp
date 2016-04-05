@@ -2,11 +2,11 @@
 <%
 String name = request.getParameter("name");
 int row = Integer.parseInt(request.getParameter("row"));
+int column = Integer.parseInt(request.getParameter("column"));
 if (row < 1){
 	response.sendRedirect("classexercise.jsp?error=row&name="+name);
 }
-int column = Integer.parseInt(request.getParameter("column"));
-if (column < 1){
+else if (column < 1){
 	response.sendRedirect("classexercise.jsp?error=column&name="+name);
 }
 %>
